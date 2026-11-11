@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Berijalan Academy — Welcome Aboard Bootcamp Batch 19</title>
+  <meta
+    name="description"
+    content="Sesi orientasi Berijalan Academy Batch 19 — Intensif Full Stack & AI Engineering."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500&family=JetBrains+Mono:wght@500;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            base: '#0f131d',
+            surface: '#171b26',
+            elevated: '#262a35',
+            chip: '#1c1f2a',
+            ink: {
+              DEFAULT: '#dfe2f1',
+              body: '#c7c4d7',
+              muted: '#908fa0',
+              dim: '#464554',
+              divider: '#464554',
+            },
+            accent: { DEFAULT: '#8083ff', soft: '#c0c1ff', deep: '#0d0096' },
+            mint: '#4fdbc8',
+          },
+          fontFamily: {
+            display: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    /* Ambient atmospheric grid — matches the 2.5% rule lines in the design */
+    .ambient-grid {
+      background-image:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 2.5%, rgba(255, 255, 255, 0) 2.5%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.03) 2.5%, rgba(255, 255, 255, 0) 2.5%);
+    }
+    .headline-gradient {
+      background-image: linear-gradient(90deg, #c0c1ff 0%, #8083ff 50%, #4fdbc8 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .card-sheen {
+      background-image: radial-gradient(120% 120% at 0% 0%, rgba(128, 131, 255, 0.06), transparent 60%);
+    }
+  </style>
+</head>
+
+<body class="min-h-screen bg-base font-sans text-ink antialiased selection:bg-accent/30">
+  <div class="relative mx-auto flex min-h-screen w-full max-w-[1280px] flex-col overflow-hidden">
+    <!-- Ambient atmospheric backdrops -->
+    <div class="ambient-grid pointer-events-none absolute inset-x-0 top-0 h-[1024px]" aria-hidden="true"></div>
+    <div
+      class="pointer-events-none absolute -top-[160px] left-1/2 h-[480px] w-[720px] -translate-x-1/2 rounded-full bg-accent/15 blur-[140px]"
+      aria-hidden="true"
+    ></div>
+    <div
+      class="pointer-events-none absolute bottom-[-160px] right-[40px] h-[350px] w-[500px] rounded-full bg-[rgba(4,180,162,0.1)] blur-[130px]"
+      aria-hidden="true"
+    ></div>
+
+    <!-- ═══════════════ Header / Status bar ═══════════════ -->
+    <header class="relative z-10 flex h-20 w-full items-center justify-between px-6">
+      <!-- Brand -->
+      <div class="flex items-center gap-3">
+        <div
+          class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-white/10 bg-elevated p-px"
+        >
+          <img src="./assets/logo-mark.svg" alt="Berijalan logo" width="15" height="12" class="h-3 w-[15px]" />
+        </div>
+
+        <span class="font-display text-[20px] font-bold leading-7 tracking-[-0.5px] text-ink">Berijalan</span>
+
+        <span class="font-sans text-base leading-6 text-ink-dim">/</span>
+
+        <span class="font-mono text-[11px] font-medium uppercase leading-[14px] tracking-[0.55px] text-ink-body">
+          Academy Division
+        </span>
+      </div>
+
+      <!-- Live status meta -->
+      <div class="flex items-center gap-3">
+        <div
+          class="flex items-center gap-2 rounded-full border border-white/10 bg-[rgba(23,27,38,0.8)] px-[13px] py-[7px] backdrop-blur-[12px]"
+        >
+          <span class="relative flex h-2 w-2 shrink-0">
+            <span class="absolute inset-0 rounded-full bg-mint opacity-75"></span>
+            <span class="relative h-2 w-2 rounded-full bg-mint"></span>
+          </span>
+          <span class="font-mono text-[11px] font-medium leading-[14px] tracking-[0.88px] text-ink-body">
+            STREAM READY
+          </span>
+        </div>
+
+        <div
+          class="flex items-center gap-[6px] rounded-full border border-white/5 bg-[rgba(38,42,53,0.5)] px-[13px] py-[7px]"
+        >
+          <img src="./assets/icon-calendar.svg" alt="" width="10.5" height="11.67" class="h-[11.67px] w-[10.5px]" />
+          <span class="font-mono text-[11px] font-medium leading-[14px] tracking-[0.88px] text-ink-body">
+            Q2 COHORT
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <!-- ═══════════════ Main presentation canvas ═══════════════ -->
+    <main class="relative z-10 flex w-full flex-1 flex-col items-center px-6 pb-[93px] pt-[94px] lg:px-[192px]">
+      <div class="flex w-full max-w-[896px] flex-col items-center">
+        <!-- Batch badge -->
+        <div
+          class="flex items-center gap-[10px] rounded-full border border-white/10 bg-[rgba(38,42,53,0.6)] px-[17px] py-[7px] shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)] backdrop-blur-[12px]"
+        >
+          <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-mint shadow-[0px_0px_8px_0px_rgba(79,219,200,0.8)]"></span>
+          <p class="text-center font-mono text-[12px] font-medium uppercase leading-4 tracking-[1.2px] text-mint">
+            Berijalan • Batch 19 • Intensif Full Stack &amp; AI Engineering
+          </p>
+        </div>
+
+        <!-- Headline -->
+        <div class="flex w-full flex-col items-center pt-8">
+          <div class="flex w-full flex-col items-center gap-3">
+            <h1
+              class="text-center font-display text-[40px] font-extrabold leading-[50px] tracking-[-1.4px] text-ink sm:text-[56px] sm:leading-[70px]"
+            >
+              <span class="block">Welcome Aboard</span>
+              <span class="headline-gradient block">Bootcamp Batch 19</span>
+            </h1>
+
+            <p
+              class="mx-auto max-w-[672px] pt-2 text-center font-sans text-base leading-[29.25px] tracking-[-0.09px] text-ink-body sm:text-lg"
+            >
+              Perjalanan transformatif Anda menjadi engineer profesional berkelas dunia dimulai dari sini. Siapkan
+              diri, bangun kolaborasi, dan ciptakan karya berdampak.
+            </p>
+          </div>
+        </div>
+
+        <!-- 3 Key orientation highlights -->
+        <div class="flex w-full flex-col items-center pt-8">
+          <div class="grid w-full grid-cols-1 gap-6 pt-6 sm:grid-cols-3">
+            <!-- Card 1 -->
+            <article
+              class="card-sheen flex flex-col justify-between rounded-xl border border-white/[0.08] bg-[rgba(23,27,38,0.7)] p-[25px] backdrop-blur-[12px] transition-colors duration-300 hover:border-accent/40"
+            >
+              <div class="flex items-center justify-between pb-4">
+                <div
+                  class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-white/5 bg-elevated p-px"
+                >
+                  <img src="./assets/icon-clock.svg" alt="" width="16.67" height="17.5" class="h-[17.5px] w-[16.67px]" />
+                </div>
+                <span
+                  class="rounded border border-white/5 bg-chip px-[9px] py-[3px] font-mono text-[11px] font-medium leading-[14px] tracking-[0.88px] text-ink-muted"
+                >
+                  01 / TRACK
+                </span>
+              </div>
+
+              <div class="flex flex-col gap-[7px]">
+                <h2 class="font-display text-xl font-semibold leading-7 tracking-[-0.2px] text-ink">
+                  16 Minggu Intensif
+                </h2>
+                <p class="font-sans text-[13px] leading-[21.13px] tracking-[0.065px] text-ink-body">
+                  Kurikulum komprehensif dari fundamental hingga deployment siap industri.
+                </p>
+              </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article
+              class="card-sheen flex flex-col gap-[21px] rounded-xl border border-white/[0.08] bg-[rgba(23,27,38,0.7)] p-[25px] backdrop-blur-[12px] transition-colors duration-300 hover:border-accent/40"
+            >
+              <div class="flex items-center justify-between pb-4">
+                <div
+                  class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-white/5 bg-elevated p-px"
+                >
+                  <img src="./assets/icon-code.svg" alt="" width="15" height="15.88" class="h-[15.88px] w-[15px]" />
+                </div>
+                <span
+                  class="rounded border border-white/5 bg-chip px-[9px] py-[3px] font-mono text-[11px] font-medium leading-[14px] tracking-[0.88px] text-ink-muted"
+                >
+                  02 / CRAFT
+                </span>
+              </div>
+
+              <div class="flex flex-col gap-[7px]">
+                <h2 class="font-display text-xl font-semibold leading-7 tracking-[-0.2px] text-ink">
+                  Real-World Projects
+                </h2>
+                <p class="font-sans text-[13px] leading-[21.13px] tracking-[0.065px] text-ink-body">
+                  Bangun portfolio produk digital nyata yang teruji skala produksi.
+                </p>
+              </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article
+              class="card-sheen flex flex-col gap-[21px] rounded-xl border border-white/[0.08] bg-[rgba(23,27,38,0.7)] p-[25px] backdrop-blur-[12px] transition-colors duration-300 hover:border-accent/40"
+            >
+              <div class="flex items-center justify-between pb-4">
+                <div
+                  class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-white/5 bg-elevated p-px"
+                >
+                  <img
+                    src="./assets/icon-mentor.svg"
+                    alt=""
+                    width="16.67"
+                    height="16.67"
+                    class="h-[16.67px] w-[16.67px]"
+                  />
+                </div>
+                <span
+                  class="rounded border border-white/5 bg-chip px-[9px] py-[3px] font-mono text-[11px] font-medium leading-[14px] tracking-[0.88px] text-ink-muted"
+                >
+                  03 / GUILD
+                </span>
+              </div>
+
+              <div class="flex flex-col gap-[7px]">
+                <h2 class="font-display text-xl font-semibold leading-7 tracking-[-0.2px] text-ink">
+                  Mentorship 1-on-1
+                </h2>
+                <p class="font-sans text-[13px] leading-[21.13px] tracking-[0.065px] text-ink-body">
+                  Didampingi langsung oleh senior engineers dan tech leads.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Action cluster -->
+        <div class="flex w-full flex-col items-center pt-8">
+          <div class="flex flex-col items-stretch gap-4 pt-4 sm:flex-row sm:items-center sm:justify-center">
+            <a
+              href="#orientasi"
+              class="group relative inline-flex items-center justify-center gap-3 rounded-xl bg-accent px-8 py-4 shadow-[0px_10px_25px_-5px_rgba(128,131,255,0.3)] ring-1 ring-inset ring-white/20 transition-transform duration-200 hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-soft active:translate-y-0"
+            >
+              <span class="text-center font-display text-[15px] font-semibold leading-[22.5px] text-accent-deep">
+                Mulai Sesi Orientasi
+              </span>
+              <img
+                src="./assets/icon-arrow-right.svg"
+                alt=""
+                width="12"
+                height="12"
+                class="h-3 w-3 transition-transform duration-200 group-hover:translate-x-0.5"
+              />
+            </a>
+
+            <a
+              href="#portal"
+              class="inline-flex items-center justify-center gap-[10px] rounded-xl border border-white/10 bg-[rgba(38,42,53,0.5)] px-[25px] py-[17px] transition-colors duration-200 hover:border-white/20 hover:bg-[rgba(38,42,53,0.8)] focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-soft"
+            >
+              <img src="./assets/icon-play.svg" alt="" width="13.5" height="14.25" class="h-[14.25px] w-[13.5px]" />
+              <span class="text-center font-display text-[15px] font-medium leading-[22.5px] text-ink">
+                Akses Portal Belajar
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- ═══════════════ Slide deck navigation footer ═══════════════ -->
+    <footer
+      class="relative z-10 flex w-full items-center justify-between border-t border-[rgba(70,69,84,0.2)] px-6 pb-6 pt-[25px]"
+    >
+      <div class="flex items-center gap-3">
+        <span class="h-2 w-2 shrink-0 rounded-full bg-accent-soft"></span>
+        <span class="font-mono text-[11px] font-medium leading-[14px] tracking-[0.88px] text-ink-body">
+          ORIENTATION KEYNOTE • STAGE ACTIVE
+        </span>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <div
+          class="flex items-center gap-2 rounded-lg border border-white/10 bg-surface px-[13px] py-[7px]"
+        >
+          <span class="font-mono text-[12px] font-bold leading-4 tracking-[0.72px] text-accent-soft">Slide 01</span>
+          <span class="font-mono text-[12px] font-medium leading-4 tracking-[0.72px] text-ink-muted">/</span>
+          <span class="font-mono text-[12px] font-medium leading-4 tracking-[0.72px] text-ink-dim">01</span>
+        </div>
+
+        <div class="flex items-center gap-1">
+          <button
+            type="button"
+            aria-label="Slide sebelumnya"
+            class="flex h-8 w-8 items-center justify-center rounded-lg border border-white/5 bg-[rgba(23,27,38,0.4)] p-px transition-colors duration-200 hover:bg-[rgba(23,27,38,0.9)] focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-soft"
+          >
+            <img src="./assets/icon-chevron-left.svg" alt="" width="4.93" height="8" class="h-2 w-[4.93px]" />
+          </button>
+
+          <button
+            type="button"
+            aria-label="Slide berikutnya"
+            class="flex h-8 w-8 items-center justify-center rounded-lg border border-white/5 bg-[rgba(23,27,38,0.4)] p-px transition-colors duration-200 hover:bg-[rgba(23,27,38,0.9)] focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-soft"
+          >
+            <img src="./assets/icon-chevron-right.svg" alt="" width="4.93" height="8" class="h-2 w-[4.93px]" />
+          </button>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
